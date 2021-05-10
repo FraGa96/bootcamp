@@ -1,0 +1,24 @@
+.Nav-item {
+  min-width: 90px;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-weight: normal;
+  cursor: pointer;
+  border-bottom: 3pt solid transparent;
+}
+
+.Nav-item-selected {
+  border-bottom: 3pt solid rgba(23, 234, 216, 0.8);
+  background-color: rgba(166, 166, 166, 0.8);
+}
+
+.Nav-item-vertical {
+  border-bottom: none;
+  border-right: 3pt solid transparent;
+  min-height: 50px;
+}
+
+.Nav-item-selected.Nav-item-vertical {
+  border-right: 3pt solid rgba(23, 234, 216, 0.8);
+}

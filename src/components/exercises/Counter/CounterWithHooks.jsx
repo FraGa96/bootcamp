@@ -7,7 +7,10 @@ function Counter(props) {
     if (count < props.maxValue) {
       setCount(prevCount => prevCount + 1);
     }
-    props.sayHi();
+
+    if (props.sayHi) {
+      props.sayHi();
+    }
   }
 
   useEffect(() => {
@@ -15,7 +18,7 @@ function Counter(props) {
 
     return () => {
       console.log('cleanup');
-    }
+    };
   });
 
   useEffect(() => {
@@ -23,7 +26,7 @@ function Counter(props) {
 
     return () => {
       console.log('run cleanup');
-    }
+    };
   }, [count]);
 
   useEffect(() => {
@@ -31,8 +34,8 @@ function Counter(props) {
 
     return () => {
       console.log('will unmount');
-    }
-  }, [])
+    };
+  }, []);
 
   return (
     <div>

@@ -1,0 +1,12 @@
+.Landing {
+  display: flex;
+  padding: 50px;
+}
+
+.Landing-left {
+  flex: 1;
+}
+
+.Landing-right {
+  flex: 2;
+}
