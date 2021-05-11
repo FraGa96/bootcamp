@@ -1,0 +1,11 @@
+.Pokemon {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+}
+
+.Pokemon span {
+  margin-bottom: 5px;
+  text-align: center;
+  text-transform: capitalize;
+}

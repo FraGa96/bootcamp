@@ -5,33 +5,26 @@ import logo from '../../../assets/images/arkus_logo.png';
 import './Header.css';
 
 const items = [
-  { title: 'Home', id: viewsEnum.LANDING },
-  { title: 'Exercises', id: viewsEnum.EXCERCISES },
+  { title: 'Home', id: viewsEnum.LANDING, path: '/', exact: true },
+  { title: 'Exercises', id: viewsEnum.EXCERCISES, path: '/exercises', exact: false },
 ];
 
-const Header = (props) => {
-  const handleNavigation = (newView) => () => {
-    if (newView !== props.view) {
-      props.onNav(newView);
-    }
-  };
+const Header = (props) => (
+  <header className="Header">
+    <div className="Header-logo">
+      <img src={logo} alt="" />
+    </div>
 
-  return (
-    <header className="Header">
-      <div className="Header-logo">
-        <img src={logo} alt="" />
-      </div>
-
-      {items.map(item => (
-        <NavItem
-          key={item.title}
-          selected={props.view === item.id}
-          onNav={handleNavigation(item.id)}
-          title={item.title}
-        />
-      ))}
-    </header>
-  );
-};
+    {items.map(item => (
+      <NavItem
+        exact={item.exact}
+        key={item.title}
+        path={item.path}
+        selected={props.view === item.id}
+        title={item.title}
+      />
+    ))}
+  </header>
+);
 
 export default Header;

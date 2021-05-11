@@ -2,22 +2,18 @@ import React from 'react';
 import NavItem from '../NavItem/NavItem';
 import './Sidebar.css';
 
-const Sidebar = (props) => {
-  const handleNavigation = (selectedItem) => () => props.onNav(selectedItem);
-
-  return (
-    <div className="Sidebar">
-      {props.items.map(item => (
-        <NavItem
-          key={item.title}
-          title={item.title}
-          vertical
-          selected={item.id === props.selected}
-          onNav={handleNavigation(item.id)}
-        />
-      ))}
-    </div>
-  );
-};
+const Sidebar = (props) => (
+  <div className="Sidebar">
+    {props.items.map(item => (
+      <NavItem
+        exact={item.exact}
+        key={item.title}
+        path={item.path}
+        title={item.title}
+        vertical
+      />
+    ))}
+  </div>
+);
 
 export default Sidebar;

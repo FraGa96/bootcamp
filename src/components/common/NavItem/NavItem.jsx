@@ -1,24 +1,23 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './NavItem.css';
 
 const NavItem = (props) => {
   const classNames = ['Nav-item'];
-  if (props.selected) {
-    classNames.push('Nav-item-selected');
-  }
 
-  if (props.vertical) { 
+  if (props.vertical) {
     classNames.push('Nav-item-vertical');
   }
 
   return (
-    <button
+    <NavLink 
+      to={props.path} 
+      exact={props.exact}
       className={classNames.join(' ')}
-      type="button"
-      onClick={props.onNav}
+      activeClassName="Nav-item-selected"
     >
       {props.title}
-    </button>
+    </NavLink>
   );
 };
 
