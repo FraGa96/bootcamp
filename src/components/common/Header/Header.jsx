@@ -20,7 +20,6 @@ const Header = (props) => (
         exact={item.exact}
         key={item.title}
         path={item.path}
-        selected={props.view === item.id}
         title={item.title}
       />
     ))}
