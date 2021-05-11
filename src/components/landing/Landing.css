@@ -4,9 +4,30 @@
 }
 
 .Landing-left {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   flex: 1;
 }
 
 .Landing-right {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   flex: 2;
+}
+
+.Landing-right p {
+  width: 70%;
+}
+
+.Landing-image-wrapper {
+  border-radius: 50%;
+  border: 2pt solid rgba(23, 234, 216, 0.8);
+  overflow: hidden;
+  width: 60%;
+}
+
+.Landing-image-wrapper img {
+  width: 100%;
 }

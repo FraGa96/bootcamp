@@ -36,7 +36,10 @@ const Excercises = () => {
         selected={actualExercise}
         onNav={handleChangeExcercise}
       />
-      {content}
+
+      <main>
+        {content}
+      </main>
     </div>
   );
 };

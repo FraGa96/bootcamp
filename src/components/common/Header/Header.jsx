@@ -21,6 +21,7 @@ const Header = (props) => {
       <div className="Header-logo">
         <img src={logo} alt="" />
       </div>
+
       {items.map(item => (
         <NavItem
           key={item.title}
