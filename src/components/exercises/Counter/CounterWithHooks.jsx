@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import './Counter.css';
 
 function Counter(props) {
@@ -59,6 +60,11 @@ function Counter(props) {
       {props.children}
     </div>
   );
+}
+
+Counter.propTypes = {
+  sayHi: PropTypes.func,
+  maxValue: PropTypes.number.isRequired
 }
 
 export default Counter;
