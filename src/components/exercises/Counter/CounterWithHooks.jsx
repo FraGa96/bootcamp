@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import Button from '../../common/Button/Button';
 import './Counter.css';
 
 function Counter(props) {
@@ -43,12 +44,9 @@ function Counter(props) {
     <div className="Counter">
       <h1>{count}</h1>
 
-      <button
-        className="Button"
-        onClick={handleClick}
-      >
+      <Button onClick={handleClick}>
         Click here
-      </button>
+      </Button>
 
       {count === props.maxValue
         ? <span className="Counter-error">You reach the limit</span>
