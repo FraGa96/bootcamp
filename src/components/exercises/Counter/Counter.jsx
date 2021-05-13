@@ -43,7 +43,7 @@ class Counter extends React.Component {
         <p>The max value is {this.props.maxValue}</p>
         {this.props.children}
       </div>
-    )
+    );
   }
 }
 

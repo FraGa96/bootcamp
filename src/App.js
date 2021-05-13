@@ -1,18 +1,33 @@
-import Counter from './components/counter/CounterWithHooks';
+import React, { useState } from 'react';
+import Excercises from './components/exercises/Excercises';
+import Header from './components/common/Header/Header';
+import Landing from './components/landing/Landing';
+import { viewsEnum } from './utils/constants';
 import './App.css';
 
 function App() {
-  const sayHello = () => {
-    console.log("HELLOO!");
+  const [view, setView] = useState(viewsEnum.LANDING);
+
+  const handleNavigation = (newView) => {
+    setView(newView);
+  }
+
+  let content = null;
+
+  switch (view) {
+    case viewsEnum.EXCERCISES:
+      content = <Excercises />;
+      break;
+    case viewsEnum.LANDING:
+    default:
+      content = <Landing />;
   }
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <Counter maxValue={15} sayHi={sayHello}>
-          <span>Hey you!</span>
-        </Counter>
-      </header>
+    <div>
+      <Header view={view} onNav={handleNavigation} />
+
+      {content}
     </div>
   );
 }
