@@ -4,6 +4,8 @@ import Sidebar from '../common/Sidebar/Sidebar';
 import Counter from './Counter/CounterWithHooks';
 import { excercisesEnum } from '../../utils/constants';
 import './Excercises.css';
+import ToDoList from './ToDoList/ToDoList';
+import ApiExample from './ApiExample/ApiExample';
 
 const Excercises = () => {
   const { url } = useRouteMatch();
@@ -12,6 +14,7 @@ const Excercises = () => {
     return [
       { title: 'Counter', id: excercisesEnum.COUNTER, path: `${url}/counter` },
       { title: 'Task list', id: excercisesEnum.TASK_LIST, path: `${url}/taskList` },
+      { title: 'Pokemon', id: excercisesEnum.POKEMON, path: `${url}/pokemon` },
     ]
   }, [url]);
 
@@ -28,7 +31,11 @@ const Excercises = () => {
           </Route>
 
           <Route path={`${url}/taskList`}>
-            {/* TODO: Create TaskList component */}
+            <ToDoList />
+          </Route>
+
+          <Route path={`${url}/pokemon`}>
+            <ApiExample />
           </Route>
         </Switch>
       </main>

@@ -1,0 +1,7 @@
+.Task {
+  border: 1pt solid lightgray;
+}
+
+.Task-done {
+  color: green;
+}
