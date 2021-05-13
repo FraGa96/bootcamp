@@ -6,4 +6,5 @@ export const viewsEnum = {
 export const excercisesEnum = {
   COUNTER: 1,
   TASK_LIST: 2,
+  POKEMON: 3,
 }
