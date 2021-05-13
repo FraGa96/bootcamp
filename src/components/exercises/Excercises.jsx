@@ -6,6 +6,8 @@ import ToDoList from './ToDoList/ToDoList';
 import ApiExample from './ApiExample/ApiExample';
 import { excercisesEnum } from '../../utils/constants';
 import './Excercises.css';
+import ToDoList from './ToDoList/ToDoList';
+import ApiExample from './ApiExample/ApiExample';
 
 const Excercises = () => {
   const { url } = useRouteMatch();
