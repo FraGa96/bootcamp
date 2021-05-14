@@ -1,0 +1,12 @@
+.Api-example {
+  margin-top: 15px;
+}
+
+.Search-pokemon {
+  margin-left: 15px;
+}
+
+.Api-example input {
+  border: 1pt solid rgba(166, 166, 166, 0.8);
+  padding: 4px;
+}

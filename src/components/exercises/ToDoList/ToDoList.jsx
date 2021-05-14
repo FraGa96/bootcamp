@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Button from '../../common/Button/Button';
 import './ToDoList.css';
 
 const ToDoList = () => {
@@ -43,17 +44,22 @@ const ToDoList = () => {
     <div>
       <div>
         <input type="text" value={task} onChange={handleTaskChange} />
-        <button type="button" onClick={handleAddTask}>Add</button>
+        
+        <Button onClick={handleAddTask}>Add</Button>
       </div>
+      
       <div>
         {items.map(item => (
           <div key={item.task} className="Task">
             <span className={item.completed ? 'Task-done' : ''}>
               {item.task}
             </span>
+            
             <div>
               <button onClick={handleDelete(item.task)}>delete</button>
+              
               <button onClick={handleEdit}>edit</button>
+              
               <button onClick={handleComplete(item.task)}>complete</button>
             </div>
           </div>
